@@ -23,9 +23,9 @@ Background: movies have been added to database
 
 Scenario: restrict to movies with 'PG' or 'R' ratings
   # enter step(s) to check the 'PG' and 'R' checkboxes
-  When I check the following ratings: ratings[PG],ratings[R]
+  When I check the following ratings: ratings[PG], ratings[R]
   # enter step(s) to uncheck all other checkboxes
-  And I uncheck the following ratings: ratings[PG-13],ratings[G]
+  And I uncheck the following ratings: ratings[PG-13], ratings[G]
   # enter step to "submit" the search form on the homepage
   And I press "Refresh"
   # enter step(s) to ensure that PG and R movies are visible
@@ -43,6 +43,6 @@ Scenario: restrict to movies with 'PG' or 'R' ratings
 
 Scenario: all ratings selected
   # see assignment
-  When I check the following ratings: ratings[PG],ratings[R],ratings[PG-13],ratings[G]
+  When I check the following ratings: ratings[PG], ratings[R], ratings[PG-13], ratings[G]
   And I press "Refresh"
   Then I should see all of the movies
