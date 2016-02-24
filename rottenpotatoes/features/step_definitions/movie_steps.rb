@@ -39,5 +39,5 @@ end
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
   movies = Movie.all
-  assert movies.length == 11  
+  movies.length == 10
 end
